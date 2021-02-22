@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +10,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MISA.BL;
 using MISA.BL.Interfaces;
+using MISA.Common;
+using MISA.Common.Entities;
+using MISA.Common.Properties;
 using MISA.DL;
 using MISA.DL.Interfaces;
 using System;
@@ -53,6 +58,18 @@ namespace MISA.CukCuk.Web
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MISA.CukCuk.Web v1"));
             }
+
+            // Xử lý Exception chung:
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
+                var serviceResult = new ServiceResult();
+                serviceResult.MISACode = MISACode.Exception;
+                serviceResult.Messenger = Resources.ErroException;
+                //await context.Response.WriteAsJsonAsync(new { error = exception.Message });
+                await context.Response.WriteAsJsonAsync(serviceResult);
+            }));
             app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseRouting();
 

@@ -89,7 +89,7 @@
           </div>
           <div class="paging-right">
               Hiển thị 1-20 trên 1000 kết quả 
-              <div @keyup.native.alt.13="addShop"></div>
+              <div></div>
           </div>
       </div>
 

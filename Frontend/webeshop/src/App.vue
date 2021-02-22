@@ -82,34 +82,7 @@ export default {
 
       ],
       Shops:[
-        {
-        shopId: "13009ae2-3273-11e8-fb69-4afe230d73a3",
-        shopCode: "",
-        shopName: "Hoàng Ngọc Anhhhhhhhhhhhhh",
-        shopAddress: "2000-12-21",       
-        shopPhone: "151515155115",
-        shopTaxCode:"111111",
-        shopNation: "Việt Nam" ,   
-        shopCity: "Việt Nam" , 
-        shopDistrict: "Việt Nam" , 
-        shopWard: "Việt Nam" , 
-        shopStreet:"D",   
-        shopStatus: "Đã nghỉiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
-      },
-      {
-        shopId: "13009ae2-3273-11e8-fb69-4afe230d73a5",
-        shopCode: "",
-        shopName: "Hoàng Ngọc Anhhhhhhhhhhhhh",
-        shopAddress: "2000-12-21",       
-        shopPhone: "151515155115",
-        shopTaxCode:"111111",
-        shopNation: "Việt Nam" ,   
-        shopCity: "Việt Nam" , 
-        shopDistrict: "Việt Nam" , 
-        shopWard: "Việt Nam" , 
-        shopStreet:"D",   
-        shopStatus: "Đã nghỉiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
-      },
+        
       ],
       
       shop:{
@@ -120,9 +93,9 @@ export default {
         shopPhone: "151515155115",
         shopTaxCode:"111111",
         shopNation: "Việt Nam" ,   
-        shopCity: "Việt Nam" , 
-        shopDistrict: "Việt Nam" , 
-        shopWard: "Việt Nam" , 
+        shopCity: "Hà nội" , 
+        shopDistrict: "Hà nội" , 
+        shopWard: "Hà nội" , 
         shopStreet:"D",   
         shopStatus: "Đã nghỉiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
       },
@@ -345,7 +318,7 @@ export default {
         }else return true;
       },
 
-      listenForFocusFilterShortcut (event) {
+      listenShowShop (event) {
       if (event.keyCode === 13 && event.altKey) {
         this.addShop();
       }
@@ -407,10 +380,16 @@ export default {
 
     window.addEventListener(
     'keyup',
-    this.listenForFocusFilterShortcut
+    this.listenShowShop
   )
     
   },
+  destroyed () {
+  window.removeEventListener(
+    'keyup',
+    this.listenShowShop
+  )
+}
  
   
 }

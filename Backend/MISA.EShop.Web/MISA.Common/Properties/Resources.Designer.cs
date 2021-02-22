@@ -61,6 +61,15 @@ namespace MISA.Common.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Có lỗi xảy ra, vui lòng liên hệ bộ phận chăm sóc để giải quyết.
+        /// </summary>
+        public static string ErroException {
+            get {
+                return ResourceManager.GetString("ErroException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;Mã khách hàng đã tồn tại&quot;.
         /// </summary>
         public static string ErroService_DuplicateCustomerCode {

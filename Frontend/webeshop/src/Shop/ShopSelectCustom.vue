@@ -56,9 +56,22 @@ export default {
   methods:{
     
   },
-  mounted() {
-    this.$emit("input1", this.selected);
+  computed:{
+    updatedefault:function(){
+      console.log(this.$attrs.value);
+        return this.$attrs.value;
+        
+    }
   },
+  watch:{
+    updatedefault:function(){
+      this.selected = this.$attrs.value;
+      console.log("a");   
+    }
+  },
+  // mounted() {
+  //   this.$emit("input", this.selected);
+  // },
 };
 </script>
 

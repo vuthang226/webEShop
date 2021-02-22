@@ -44,7 +44,7 @@
                         </div>
                         <div class="grid-item">
                             <ShopSelectCustom
-                                :options="['Việt Nam']"
+                                :options="[]"
                                 :default="shop.shopNation"
                                 v-model="shop.shopNation"
                                 :tabindex="0"
@@ -62,7 +62,7 @@
                         <div class="grid-item">
                             <ShopSelectCustom
                                 :options="citys"
-                                :default="shop.shopCity"
+                                :default="shop.shopCity" 
                                  v-model="shop.shopCity" 
                                 @input="changeDistrict"
                                 :tabindex="0"
@@ -75,7 +75,7 @@
                             <ShopSelectCustom
                                 :options="districts"
                                 :default="shop.shopDistrict"
-                                v-model="shop.shopDistrict"
+                                v-model="shop.shopDistrict" 
                                 @input="changeWard"
                                 :tabindex="0"
                             />
