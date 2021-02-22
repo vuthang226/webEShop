@@ -1,0 +1,72 @@
+.m-btn {
+    display: flex;
+    align-items: center;
+    background-color: #026b97;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: GoogleSans-Regular;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.m-btn:hover {
+    background-color: #0088c1;
+}
+.m-btn:focus {
+    background-color: #00577b;
+}
+.m-btn-delete{
+    background-color: #EB7728;
+}
+.m-btn-delete:hover{
+    background-color: #F7904B;
+}
+.m-btn-delete:focus{
+    background-color: #EB7928;
+}
+.m-btn-default{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 13px;
+    color: #026b97;
+    font-family: GoogleSans-Regular;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.m-btn-default:hover{
+    background-color: #026b97;
+    color: #ffffff;
+}
+.m-btn-second{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 13px;
+    color: #026b97;
+    border: 2px solid #026b97;
+    font-family: GoogleSans-Regular;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.m-btn-second:hover{
+    background-color: #026b97;
+    color: #ffffff;
+    
+}
