@@ -12,6 +12,7 @@ namespace MISA.BL
 {
     public class ShopBL : BaseBL<Shop>, IShopBL
     {
+        #region DECLARE
         IShopDL _shopDL;
         IDbContext<Shop> _dbContext;
         public ShopBL(IDbContext<Shop> dbContext, IShopDL ShopDL) : base(dbContext)
@@ -19,6 +20,9 @@ namespace MISA.BL
             _shopDL = ShopDL;
             _dbContext = dbContext;
         }
+        #endregion
+
+        #region METHODS
         /// <summary>
         /// Lấy mã code cao nhất
         /// </summary>
@@ -84,5 +88,20 @@ namespace MISA.BL
             return serviceResult;
 
         }
+
+
+        /// <summary>
+        /// Lấy dữ liệu bằng proc theo trang cùng sắp xếp dữ liệu
+        /// </summary>
+        /// <param name="page">Số trang</param>
+        /// <param name="filter">Cách sắp</param>
+        /// <param name="desc">Tăng hay giảm dần</param>
+        /// <returns></returns>
+        public IEnumerable<Shop> GetShopSortPage(int page, string filter, int desc)
+        {
+            var shops = _shopDL.GetShopSortPage(page,filter,desc);
+            return shops;
+        }
+        #endregion
     }
 }

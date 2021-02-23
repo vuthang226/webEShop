@@ -65,9 +65,27 @@ export default {
   },
   watch:{
     updatedefault:function(){
-      this.selected = this.$attrs.value;
-      console.log("a");   
-    }
+      this.selected = this.$attrs.value;     
+      if(this.options != null && this.open == false){
+        for(let i = 0;i < this.options.length;i++){
+          if(this.options[i] == this.selected){
+            this.index = i;
+          }
+        }
+      }
+      
+    },
+    options:function(){
+      if(this.options != null && this.open == false){
+        for(let i = 0;i < this.options.length;i++){
+          if(this.options[i] == this.selected){
+            this.index = i;
+          }
+        }
+      }
+    },
+
+
   },
   // mounted() {
   //   this.$emit("input", this.selected);

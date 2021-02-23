@@ -12,13 +12,15 @@ namespace MISA.BL
 {
     public class BaseBL<TEntity> : IBaseBL<TEntity>
     {
-
+        #region DECLARE
         IDbContext<TEntity> _dbContext;
         public BaseBL(IDbContext<TEntity> dbContext)
         {
             _dbContext = dbContext;
         }
+        #endregion
 
+        #region METHODS
         /// <summary>
         /// Lấy toàn bộ dữ liệu
         /// </summary>
@@ -165,8 +167,8 @@ namespace MISA.BL
             var stringg = "";
             return stringg;
         }
-        
 
+        #endregion
 
     }
 }

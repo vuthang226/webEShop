@@ -10,6 +10,7 @@ namespace MISA.DL
 {
     public class DbContext<TEntity>:IDbContext<TEntity>
     {
+        #region DECLARE
         //Khởi tạo
         protected string _connectionString = "Host=47.241.69.179;User Id=dev; password=12345678;Database=MF727_VHTHANG_CukCuk;port=3306;Character Set=utf8";
         protected IDbConnection _dbConnection;
@@ -17,7 +18,9 @@ namespace MISA.DL
         {
             _dbConnection = new MySqlConnection(_connectionString);
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Lấy dữ liệu theo nhiều tiêu chí
         /// </summary>
@@ -123,6 +126,7 @@ namespace MISA.DL
             var query = _dbConnection.Execute(sqlString, entity, commandType: CommandType.Text);
             return query;
         }
+        #endregion
 
     }
 }

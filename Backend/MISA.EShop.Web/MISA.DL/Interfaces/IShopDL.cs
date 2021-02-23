@@ -9,5 +9,6 @@ namespace MISA.DL.Interfaces
     {
         public string GetHighestCode();
         public IEnumerable<Shop> CheckDuplicate(string name, string value);
+        public IEnumerable<Shop> GetShopSortPage(int page, string filter, int desc);
     }
 }

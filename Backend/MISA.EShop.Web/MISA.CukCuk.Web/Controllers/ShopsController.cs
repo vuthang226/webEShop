@@ -1,4 +1,5 @@
 ﻿
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MISA.BL.Interfaces;
@@ -16,7 +17,7 @@ namespace MISA.CukCuk.Web.Controllers
     [ApiController]
     public class ShopsController : BaseController<Shop>
     {
-        IShopBL _shopBL;      
+        IShopBL _shopBL;
         public ShopsController(IShopBL shopBL) : base(shopBL)
         {
             _shopBL = shopBL;
@@ -32,12 +33,18 @@ namespace MISA.CukCuk.Web.Controllers
             return _shopBL.GetHighestCodeAddOne();
         }
 
-        //[HttpGet("codes")]
-        //public IEnumerable<Shop> Get(string code, int aa)
-        //{
-        //    DynamicParameters dynamicParameters = new DynamicParameters();
-        //    dynamicParameters.Add($"@id", "ShopName");
-        //    return _idbContext.GetData("procedure1", dynamicParameters, CommandType.StoredProcedure);
-        //}
+
+        /// <summary>
+        /// Lấy dữ liệu bằng proc theo trang cùng sắp xếp dữ liệu
+        /// </summary>
+        /// <param name="page">Số trang</param>
+        /// <param name="filter">Cách sắp</param>
+        /// <param name="desc">Tăng hay giảm dần</param>
+        /// <returns></returns>
+        [HttpGet("sort")]
+        public IEnumerable<Shop> Get(int page, string filter,int desc)
+        {
+            return _shopBL.GetShopSortPage(page, filter, desc);
+        }
     }
 }

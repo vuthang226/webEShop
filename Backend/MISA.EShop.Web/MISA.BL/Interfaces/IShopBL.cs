@@ -8,5 +8,6 @@ namespace MISA.BL.Interfaces
     public interface IShopBL:IBaseBL<Shop>
     {
         public string GetHighestCodeAddOne();
+        public IEnumerable<Shop> GetShopSortPage(int page, string filter, int desc);
     }
 }
