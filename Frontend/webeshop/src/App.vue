@@ -15,6 +15,10 @@
           @cloneShop="cloneShop"
           @deleteShop="deleteShop"
           @refreshData="refreshData"
+          @nextPage="nextPage"
+          @changePage="changePage"
+          :page="pageNum"
+          @changeSort="changeSort"
         />
       </div>
     </div>
@@ -29,7 +33,8 @@
       :isDeleteHide="isDeleteHide"        
       @deleteShop="deleteShop"
       @changeDistrict="changeDistrict"
-      @changeWard="changeWard"   
+      @changeWard="changeWard"
+         
     />
     <ShopDialogPopUp
       :isDialogPopupHide="isDialogPopupHide"
@@ -59,6 +64,14 @@ export default {
   name: 'app',
   data () {
     return {
+      //Tổng số trang
+      allNumOfPage:250,
+      //Sắp xếp theo
+      filter:"ShopCode",
+      //Cách sắp tăng (0) hoặc giảm (1)
+      desc:1,
+      //Trang hiện tại
+      pageNum:1,
       //Confim xóa
       isDeleteCf:true,
       //Ản thông báo
@@ -129,6 +142,18 @@ export default {
         const response =await axios.get("http://localhost:52327/api/v1/Wards?id="+data)
         this.wards = response.data;
       },
+
+      changeSort(sort){
+      
+        if(this.filter != sort){
+          this.filter = sort;
+          this.desc = 1;
+        }else {
+          if(this.desc == 0 )this.desc = 1;
+          else this.desc = 0;
+        }
+        this.refreshData();
+      },
       
       //Ản thông báo
       btnCancelPopup(){
@@ -172,11 +197,25 @@ export default {
         //Hiêm thông báo khi xóa xong
       },
 
+      //phân trang
+      nextPage(num){
+            this.pageNum += num;
+            if(this.pageNum < 1) this.pageNum = 1;
+            else if(this.pageNum > this.allNumOfPage) this.pageNum = this.allNumOfPage;
+            this.refreshData();
+        },
+      changePage(num){
+            if(this.pageNum = 0){
+              this.pageNum = 1;
+            }else this.pageNum = this.allNumOfPage;
+            this.refreshData();
+        },
+
       //refresh dữ liệu table
       async refreshData(){
           //Tạo hoạt ảnh loading
           //Lấy dữ liệu
-          const response =await axios.get("http://localhost:52327/api/v1/Shops");
+          const response =await axios.get("http://localhost:52327/api/v1/Shops/sort?page="+this.pageNum+"&filter="+this.filter+"&desc="+this.desc);
           this.Shops = response.data;
           
       },
@@ -298,7 +337,7 @@ export default {
 
       //validate
       validate(){
-        console.log('a');
+        
         if(this.shop.shopCode == null|| this.shop.shopCode.trim() == ""){
           this.msgPopUp="Mã cửa hàng không được phép để trống";
           this.isDialogPopupHide=false;
@@ -358,6 +397,8 @@ export default {
     
 
   },
+
+  
   components:{
     ShopMenu,
     ShopHeader,
@@ -372,7 +413,7 @@ export default {
       document.head.appendChild(fontScript);
   },
   async created() {
-    const response =await axios.get("http://localhost:52327/api/v1/Shops");
+    const response =await axios.get("http://localhost:52327/api/v1/Shops/sort?page="+this.pageNum+"&filter="+this.filter+"&desc="+this.desc);
     const a= await axios.get("http://localhost:52327/api/v1/Citys");  //sửa
 
     this.citys=a.data;

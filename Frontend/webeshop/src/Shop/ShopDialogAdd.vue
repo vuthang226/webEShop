@@ -13,7 +13,7 @@
                             Mã cửa hàng <span class="label-required">*</span>
                         </div>
                         <div class="grid-item1">
-                            <input v-model="shop.shopCode" ref="shopCode" id="shopCode" required class="input1" type="text" tabindex="0"/>
+                            <input v-model="shop.shopCode" id="shopCode" required class="input1" type="text" tabindex="0"/>
                         </div>
                         <div class="grid-item">
                             Tên cửa hàng <span class="label-required">*</span>
@@ -64,7 +64,8 @@
                                 :options="citys"
                                 :default="shop.shopCity" 
                                  v-model="shop.shopCity" 
-                                @input="changeDistrict"
+                                
+                                @change="changeDistrict"
                                 :tabindex="0"
                         />
                         </div>
@@ -76,7 +77,8 @@
                                 :options="districts"
                                 :default="shop.shopDistrict"
                                 v-model="shop.shopDistrict" 
-                                @input="changeWard"
+                                
+                                @change="changeWard"
                                 :tabindex="0"
                             />
                         </div>
@@ -169,10 +171,7 @@ export default {
             this.$emit('deleteShop',this.data);
             
         },
-        focusInput(){
-            this.$refs.shopCode.focus();
-            console.log("as");
-        }
+        
         
     },
     
@@ -180,9 +179,9 @@ export default {
     components:{
         ShopSelectCustom,
     },
-    mounted(){
-        this.focusInput();
-    }
+    
+        
+    
     
 }
 </script>

@@ -29,3 +29,14 @@ C:\Users\Admin\Desktop\New folder\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\n
 C:\Users\Admin\Desktop\New folder\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\New folder\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
 C:\Users\Admin\Desktop\New folder\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.deps.json
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.dll
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csprojAssemblyReference.cache
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.Properties.Resources.resources
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.GenerateResource.cache
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfoInputs.cache
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
+F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb

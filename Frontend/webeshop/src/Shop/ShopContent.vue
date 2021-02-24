@@ -28,11 +28,11 @@
                         <thead>
                             <tr class="title-tb1">
 
-                                <th style="width:120px;"><div class="cell">Mã cửa hàng</div></th>
-                                <th style="width:300px"><div class="cell">Tên cửa hàng</div></th>
-                                <th style="width:590px"><div class="cell">Địa chị</div></th>
-                                <th style="width:140px"><div class="cell">Số điện thoại</div></th>
-                                <th style="width:144px"><div class="cell">Trạng thái</div></th>
+                                <th @click="changeSort(1)" style="width:9%;"><div class="cell">Mã cửa hàng</div></th>
+                                <th @click="changeSort(2)" style="width:20%"><div class="cell">Tên cửa hàng</div></th>
+                                <th style="width:48%"><div class="cell">Địa chị</div></th>
+                                <th style="width:11%"><div class="cell">Số điện thoại</div></th>
+                                <th @click="changeSort(3)" style="width:11%"><div class="cell">Trạng thái</div></th>
                                 
                             </tr>
                         </thead>
@@ -49,19 +49,19 @@
                                 @dblclick="showShop(shop)">
                                 
                             <td>
-                                <div class="cell" style="max-width:120px">{{ shop.shopCode }}</div>
+                                <div class="cell" >{{ shop.shopCode }}</div>
                                 </td>
                                 <td>
-                                <div class="cell" style="max-width:300px">{{ formatEmpty(shop.shopName) }}</div>
+                                <div class="cell" >{{ formatEmpty(shop.shopName) }}</div>
                                 </td>
                                 <td>
-                                <div class="cell" style="max-width:590px">{{ formatEmpty(shop.shopAddress) }}</div>
+                                <div class="cell" >{{ formatEmpty(shop.shopAddress) }}</div>
                                 </td>
                                 <td>
-                                <div class="cell" style="max-width:140px">{{ formatEmpty(shop.shopPhone) }}</div>
+                                <div class="cell" >{{ formatEmpty(shop.shopPhone) }}</div>
                                 </td>
                                 <td>
-                                <div class="cell" style="max-width:144px">{{ formatEmpty(shop.shopStatus) }}</div>
+                                <div class="cell" >{{ formatEmpty(shop.shopStatus) }}</div>
                                 </td>
                             </tr>
                 
@@ -74,14 +74,16 @@
 
       <div class="paging-bar">
           <div class="paging-left">
-                <div class="btn-square" ><div class="icon-firstpage"></div></div>
-                <div class="btn-square" ><div class="icon-prevpage"></div></div>
+                <button class="btn-square" @click="changePage(0)"><i class="fas fa-angle-double-left"></i></button>
+                <button class="btn-square" @click="nextPage(-1)"><i class="fas fa-angle-left"></i></button>
+                
                 <p class="paging-item">Trang</p>
                 <input class="input-page" tabindex="10"/>
                 <p class="paging-item">trên 1</p>
-                <div class="btn-square" ><div class="icon-nextpage"></div></div>
-                <div class="btn-square" ><div class="icon-lastpage"></div></div>
-                <div class="btn-square" ><div class="icon-reload"></div></div>
+                
+                <button class="btn-square" @click="nextPage(1)"><i class="fas fa-angle-right"></i></button>
+                <button class="btn-square" @click="changePage(1)"><i class="fas fa-angle-double-right"></i></button>
+                <button class="btn-square"><i class="fas fa-sync-alt"></i></button>
                 
 
                 
@@ -101,6 +103,13 @@
 import ShopSelectCustom from './ShopSelectCustom.vue'
 export default {
     name:'ShopContent',
+    props:{
+        page:{
+            type:Number,
+            default:1,
+        }
+        
+    },
     data(){
         return{
             data:{},
@@ -129,10 +138,22 @@ export default {
         },
         focusShop(data){
             this.data = data;
-
+        },
+        nextPage(num){
+            this.$emit('nextPage',num)
+        },
+        changePage(num){
+            this.$emit('changePage',num)
         },
         showShop(data){           
             this.$emit('showShop',data);
+        },
+        changeSort(sort){
+            if(sort == 1)sort = "ShopCode";
+            else if(sort == 2) sort = "ShopName";
+            else if(sort == 3) sort = "ShopStatus";
+            else sort = "ShopName";
+            this.$emit('changeSort',sort);
         },
         formatEmpty(data){
         
@@ -161,6 +182,8 @@ export default {
     background-color: #ffffff;
 }
 .shop-content .paging-bar{
+    
+
     height: 55.4px;
     display: flex;
     justify-content: space-between;
@@ -175,16 +198,16 @@ export default {
 }
 .table-all{
 
-    height: 636px;
+    height: calc(100% - 55.4px);
 }
 .table-content{
     width:100%;
-    height: 596px;
+    height: calc(100% - 55.4px);
     overflow: auto;
 }
 #table-shop{
     border-collapse:collapse;
-    
+    width: 100%;
 }
 /* cố định phần tiêu đề của bảng */
 .table-content table th {
@@ -198,6 +221,7 @@ export default {
     /* border: 1px solid #E9E9E9; */
     border: 1px solid #c1c1c1;
     height: 38px;
+    cursor: pointer;
 }
 
 /* Tạo css cho từng dòng phâng tử: tự động ẩn nếu phần chữ tràn */
@@ -232,7 +256,9 @@ export default {
 .btn-square{
     height: 22px;
     width: 22px;
-    border: 1px solid #CECFDF;
+    border: 1px solid #bbbbbb;
+    font-size: 12px;
+    color: #bbbbbb;
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -241,7 +267,13 @@ export default {
 }
 .btn-square:hover{
     border: 1px solid #026b97;
+    color: #026b97;
 }
+.btn-square:focus{
+    border: 1px solid #026b97;
+    color: #026b97;
+}
+
 
 .icon-firstpage {
 	background: url('/public/icon/common-icon.png') no-repeat -656px -156px;

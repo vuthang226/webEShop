@@ -12,6 +12,7 @@
           selected = option;
           open = false;
           $emit('input', option);
+          $emit('change', option);
           index = i;
         "
       
@@ -66,17 +67,11 @@ export default {
   watch:{
     updatedefault:function(){
       this.selected = this.$attrs.value;     
-      if(this.options != null && this.open == false){
-        for(let i = 0;i < this.options.length;i++){
-          if(this.options[i] == this.selected){
-            this.index = i;
-          }
-        }
-      }
+      this.$emit('change',this.selected);
       
     },
-    options:function(){
-      if(this.options != null && this.open == false){
+    open:function(){
+      if(this.options != null ){
         for(let i = 0;i < this.options.length;i++){
           if(this.options[i] == this.selected){
             this.index = i;
