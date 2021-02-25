@@ -24,6 +24,7 @@ namespace MISA.DL
         /// Lấy Mã code cao nhất
         /// </summary>
         /// <returns>Mã code cao nhất</returns>
+        /// Modified by VHTHANG 20/2/2021
         public string GetHighestCode()
         {
             var entity = _dbContext.GetData($"SELECT ShopCode FROM Shop Order By ShopCode DESC Limit 1").ElementAt(0).ShopCode.ToString();
@@ -42,6 +43,7 @@ namespace MISA.DL
         /// <param name="filter">Cách sắp</param>
         /// <param name="desc">Tăng hay giảm dần</param>
         /// <returns></returns>
+        /// Modified by VHTHANG 20/2/2021
         public IEnumerable<Shop> GetShopSortPage(int page, string filter, int desc)
         {
             //Hàm có thể tạo base để đưa ra dùng chung

@@ -65,7 +65,7 @@ export default {
   data () {
     return {
       //Tổng số trang
-      allNumOfPage:250,
+      allNumOfPage:50,
       //Sắp xếp theo
       filter:"ShopCode",
       //Cách sắp tăng (0) hoặc giảm (1)
@@ -208,7 +208,7 @@ export default {
             this.refreshData();
         },
       changePage(num){
-            if(this.pageNum = 0){
+            if(num == 0){
               this.pageNum = 1;
             }else this.pageNum = this.allNumOfPage;
             this.refreshData();

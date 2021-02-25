@@ -98,6 +98,7 @@ export default {
   display: flex;
   align-items: center;
 	justify-content: center;
+  cursor: pointer;
 }
 .header-help,.header-notify{
   width: 45px;

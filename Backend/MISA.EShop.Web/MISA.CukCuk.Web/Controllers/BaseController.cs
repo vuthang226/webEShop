@@ -30,13 +30,14 @@ namespace MISA.CukCuk.Web.Controllers
             return Ok(_baseBL.GetAll());
         }
 
-        
-        
+
+
         /// <summary>
         /// Thêm mới dữ liệu có check dữ liệu trùng
         /// </summary>
         /// <param name="entity">Dữ liệu truyền vào</param>
         /// <returns>Status</returns>
+        /// VHTHANG 20/2/1021
         [HttpPost]
         public IActionResult Post(TEntity entity)
         {
@@ -58,6 +59,7 @@ namespace MISA.CukCuk.Web.Controllers
         /// <param name="entity">Dữ liệu muốn nhân bản</param>
         /// <param name="code"></param>
         /// <returns></returns>
+        /// VHTHANG 20/2/1021
         [HttpPost("clone")]
         public IActionResult Post(TEntity entity,int code = 1)
         {
@@ -78,6 +80,7 @@ namespace MISA.CukCuk.Web.Controllers
         /// </summary>
         /// <param name="entity">dữ liệu đã chỉnh sửa</param>
         /// <returns></returns>
+        /// VHTHANG 20/2/1021
         [HttpPut]
         public IActionResult Put(TEntity entity)
         {
@@ -98,6 +101,7 @@ namespace MISA.CukCuk.Web.Controllers
         /// </summary>
         /// <param name="entity">Dữ liệu cần xóa</param>
         /// <returns>trả về thông báo</returns>
+        /// VHTHANG 20/2/1021
         [HttpDelete]
         public IActionResult Delete(TEntity entity)
         {

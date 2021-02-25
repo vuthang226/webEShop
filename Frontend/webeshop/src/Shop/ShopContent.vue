@@ -74,16 +74,16 @@
 
       <div class="paging-bar">
           <div class="paging-left">
-                <button class="btn-square" @click="changePage(0)"><i class="fas fa-angle-double-left"></i></button>
-                <button class="btn-square" @click="nextPage(-1)"><i class="fas fa-angle-left"></i></button>
+                <button class="btn-square" @click="changePage(0)" tabindex="5"><i class="fas fa-angle-double-left"></i></button>
+                <button class="btn-square" @click="nextPage(-1)" tabindex="5"><i class="fas fa-angle-left"></i></button>
                 
                 <p class="paging-item">Trang</p>
                 <input class="input-page" tabindex="10"/>
                 <p class="paging-item">trên 1</p>
                 
-                <button class="btn-square" @click="nextPage(1)"><i class="fas fa-angle-right"></i></button>
-                <button class="btn-square" @click="changePage(1)"><i class="fas fa-angle-double-right"></i></button>
-                <button class="btn-square"><i class="fas fa-sync-alt"></i></button>
+                <button class="btn-square" @click="nextPage(1)" tabindex="5"><i class="fas fa-angle-right"></i></button>
+                <button class="btn-square" @click="changePage(1)" tabindex="5"><i class="fas fa-angle-double-right"></i></button>
+                <button class="btn-square"><i class="fas fa-sync-alt" tabindex="5"></i></button>
                 
 
                 
@@ -264,6 +264,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin-right: 3px;
+    background-color: white;
 }
 .btn-square:hover{
     border: 1px solid #026b97;

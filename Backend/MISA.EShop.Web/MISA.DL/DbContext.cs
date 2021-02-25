@@ -29,6 +29,7 @@ namespace MISA.DL
         /// <param name="parameters">đối tượng chứa thông tin tham số của strore</param>
         /// <param name="commandType">Mặc định CommandType.Text</param>
         /// <returns></returns>
+        /// Modified by VHTHANG 20/2/2021
         public IEnumerable<TEntity> GetData(string sqlCommand = null,object parameters = null, CommandType commandType = CommandType.Text)
         {
             var tableName = typeof(TEntity).Name;
@@ -46,6 +47,7 @@ namespace MISA.DL
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="entity">Bản ghi truyền vào</param>
         /// <returns>Số bản ghi được thêm</returns>
+        /// Modified by VHTHANG 20/2/2021
         public int Insert(TEntity entity)
         {
             var tableName = typeof(TEntity).Name;
@@ -74,6 +76,7 @@ namespace MISA.DL
         /// Lấy toàn bộ dữ liệu
         /// </summary>
         /// <returns>Dữ liệu</returns>
+        /// Modified by VHTHANG 20/2/2021
         public IEnumerable<TEntity> GetAll() 
         {
             var tableName = typeof(TEntity).Name;
@@ -88,6 +91,7 @@ namespace MISA.DL
         /// </summary>
         /// <param name="entity">Đối tượng truyền vào</param>
         /// <returns>Số bản ghi đã chỉnh</returns>
+        /// Modified by VHTHANG 20/2/2021
         public int Update(TEntity entity)
         {
             var tableName = typeof(TEntity).Name;
@@ -119,6 +123,7 @@ namespace MISA.DL
         /// </summary>
         /// <param name="entity">dữ liệu</param>
         /// <returns>Số bản ghi đã bị xóa</returns>
+        /// Modified by VHTHANG 20/2/2021
         public int Delete(TEntity entity)
         {
             var tableName = typeof(TEntity).Name;

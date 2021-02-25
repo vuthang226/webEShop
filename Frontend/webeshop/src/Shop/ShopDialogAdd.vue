@@ -13,7 +13,7 @@
                             Mã cửa hàng <span class="label-required">*</span>
                         </div>
                         <div class="grid-item1">
-                            <input v-model="shop.shopCode" id="shopCode" required class="input1" type="text" tabindex="0"/>
+                            <input v-model="shop.shopCode" id="shopCode" required class="input1" type="text" tabindex="0" ref="shopCode"/>
                         </div>
                         <div class="grid-item">
                             Tên cửa hàng <span class="label-required">*</span>
@@ -171,9 +171,24 @@ export default {
             this.$emit('deleteShop',this.data);
             
         },
+        focusCode(){
+            this.$refs.shopCode.focus();
+        }
         
         
     },
+    
+    mounted(){
+        this.$watch("isDialogAddHide",
+            function(){
+                this.focusCode();
+            }
+        
+        )
+
+        
+    },
+
     
    
     components:{
