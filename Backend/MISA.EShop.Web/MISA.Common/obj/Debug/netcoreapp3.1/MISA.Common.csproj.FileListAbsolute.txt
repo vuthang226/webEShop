@@ -40,3 +40,14 @@ F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\M
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.deps.json
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.dll
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csprojAssemblyReference.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.Properties.Resources.resources
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.GenerateResource.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfoInputs.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb

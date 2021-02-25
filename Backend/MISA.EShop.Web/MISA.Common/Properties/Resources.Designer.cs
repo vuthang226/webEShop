@@ -187,6 +187,33 @@ namespace MISA.Common.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Địa chỉ cửa hàng không được phép để trống.
+        /// </summary>
+        public static string ErroService_EmptyShopAddress {
+            get {
+                return ResourceManager.GetString("ErroService_EmptyShopAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mã cửa hàng không được phép để trống.
+        /// </summary>
+        public static string ErroService_EmptyShopCode {
+            get {
+                return ResourceManager.GetString("ErroService_EmptyShopCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tên cửa hàng không được phép để trống.
+        /// </summary>
+        public static string ErroService_EmptyShopName {
+            get {
+                return ResourceManager.GetString("ErroService_EmptyShopName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;Mã nhân viên không hợp lệ&quot;.
         /// </summary>
         public static string ErroService_ValidEmployeeCode {

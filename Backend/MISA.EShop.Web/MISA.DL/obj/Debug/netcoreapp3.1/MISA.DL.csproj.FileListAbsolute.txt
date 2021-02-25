@@ -46,3 +46,15 @@ F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.csproj.CopyComplete
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.dll
 F:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.pdb
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\bin\Debug\netcoreapp3.1\MISA.DL.deps.json
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\bin\Debug\netcoreapp3.1\MISA.DL.dll
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\bin\Debug\netcoreapp3.1\MISA.DL.pdb
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\bin\Debug\netcoreapp3.1\MISA.Common.dll
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.csprojAssemblyReference.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.AssemblyInfoInputs.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.AssemblyInfo.cs
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.csproj.CoreCompileInputs.cache
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.csproj.CopyComplete
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.dll
+D:\vhthang\webEShop\Backend\MISA.EShop.Web\MISA.DL\obj\Debug\netcoreapp3.1\MISA.DL.pdb

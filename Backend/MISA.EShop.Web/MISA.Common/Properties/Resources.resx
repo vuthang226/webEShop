@@ -159,6 +159,15 @@
   <data name="ErroService_EmptyEmployeePhone" xml:space="preserve">
     <value>"Số điện thoại không được phép để trống"</value>
   </data>
+  <data name="ErroService_EmptyShopAddress" xml:space="preserve">
+    <value>Địa chỉ cửa hàng không được phép để trống</value>
+  </data>
+  <data name="ErroService_EmptyShopCode" xml:space="preserve">
+    <value>Mã cửa hàng không được phép để trống</value>
+  </data>
+  <data name="ErroService_EmptyShopName" xml:space="preserve">
+    <value>Tên cửa hàng không được phép để trống</value>
+  </data>
   <data name="ErroService_ValidEmployeeCode" xml:space="preserve">
     <value>"Mã nhân viên không hợp lệ"</value>
   </data>

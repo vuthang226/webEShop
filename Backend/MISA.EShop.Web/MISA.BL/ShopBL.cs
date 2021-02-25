@@ -58,11 +58,11 @@ namespace MISA.BL
             {
                 var msg = new
                 {
-                    devMsg = new { Messenger = Resources.ErroService_EmptyEmployeeCode },
-                    userMsg = Resources.ErroService_EmptyEmployeeCode,
+                    devMsg = new { Messenger = Resources.ErroService_EmptyShopCode },
+                    userMsg = Resources.ErroService_EmptyShopCode,
                 };
                 serviceResult.MISACode = MISACode.NotValid;
-                serviceResult.Messenger = Resources.ErroService_EmptyEmployeeCode;
+                serviceResult.Messenger = Resources.ErroService_EmptyShopCode;
                 serviceResult.Data = msg;
                 return serviceResult;
             }
@@ -81,6 +81,33 @@ namespace MISA.BL
                     serviceResult.Data = msg;
                     return serviceResult;
                 }
+            }
+            //Kieemr tra tên của hàng có bị để trống
+            var shopName = shop.ShopName;
+            if (string.IsNullOrEmpty(shopName) || string.IsNullOrEmpty(shopName.Trim()))
+            {
+                var msg = new
+                {
+                    devMsg = new { Messenger = Resources.ErroService_EmptyShopName },
+                    userMsg = Resources.ErroService_EmptyShopName,
+                };
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = Resources.ErroService_EmptyShopName;
+                serviceResult.Data = msg;
+                return serviceResult;
+            }
+            var shopAddress = shop.ShopAddress;
+            if (string.IsNullOrEmpty(shopAddress) || string.IsNullOrEmpty(shopAddress.Trim()))
+            {
+                var msg = new
+                {
+                    devMsg = new { Messenger = Resources.ErroService_EmptyShopAddress },
+                    userMsg = Resources.ErroService_EmptyShopAddress,
+                };
+                serviceResult.MISACode = MISACode.NotValid;
+                serviceResult.Messenger = Resources.ErroService_EmptyShopAddress;
+                serviceResult.Data = msg;
+                return serviceResult;
             }
             serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = Resources.SuccessService_IsVaid;

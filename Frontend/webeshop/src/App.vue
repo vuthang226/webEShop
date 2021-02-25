@@ -160,7 +160,7 @@ export default {
         this.isDialogPopupHide=true;
         this.isDeleteCf=true;
         if(this.coderes == 201){
-          this.coderes==400;
+          this.coderes=400;
           this.isDialogAddHide=true;
         }
       },
@@ -171,11 +171,14 @@ export default {
             .then(response => {
               this.msgPopUp=response.data;
               this.isDialogPopupHide=false;
+              this.coderes==400;
+              this.refreshData();
             })
             .catch(err => {
                 if (err.response) {
                 this.msgPopUp=err.response.data.userMsg;
                 this.isDialogPopupHide=false;
+                this.coderes==400;
                 } else if (err.request) {
                 console.log(err.request)
                 } else {
@@ -273,6 +276,7 @@ export default {
                 this.coderes = response.status;
                 //Mở popup
                 this.isDialogPopupHide=false;
+                this.refreshData();
             })
             .catch(err => {
                 if (err.response) {
@@ -293,6 +297,7 @@ export default {
                 this.coderes = response.status;
                 //Mở popup
                 this.isDialogPopupHide=false;
+                this.refreshData();
             })
             .catch(err => {
                 if (err.response) {

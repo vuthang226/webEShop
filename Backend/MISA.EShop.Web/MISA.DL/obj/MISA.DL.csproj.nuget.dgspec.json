@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj": {}
+    "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj": {}
   },
   "projects": {
-    "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj": {
+    "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj",
+        "projectUniqueName": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj",
         "projectName": "MISA.Common",
-        "projectPath": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj",
+        "projectPath": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj",
         "packagesPath": "C:\\Users\\vhthang1\\.nuget\\packages\\",
-        "outputPath": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\obj\\",
+        "outputPath": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vhthang1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,18 +54,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj": {
+    "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj",
+        "projectUniqueName": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj",
         "projectName": "MISA.DL",
-        "projectPath": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj",
+        "projectPath": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\MISA.DL.csproj",
         "packagesPath": "C:\\Users\\vhthang1\\.nuget\\packages\\",
-        "outputPath": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\obj\\",
+        "outputPath": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.DL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vhthang1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj": {
-                "projectPath": "F:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj"
+              "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj": {
+                "projectPath": "D:\\vhthang\\webEShop\\Backend\\MISA.EShop.Web\\MISA.Common\\MISA.Common.csproj"
               }
             }
           }
@@ -122,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

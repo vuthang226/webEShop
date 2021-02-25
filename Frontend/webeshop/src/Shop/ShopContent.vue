@@ -32,7 +32,7 @@
                                 <th @click="changeSort(2)" style="width:20%"><div class="cell">Tên cửa hàng</div></th>
                                 <th style="width:48%"><div class="cell">Địa chị</div></th>
                                 <th style="width:11%"><div class="cell">Số điện thoại</div></th>
-                                <th @click="changeSort(3)" style="width:11%"><div class="cell">Trạng thái</div></th>
+                                <th style="width:11%"><div class="cell">Trạng thái</div></th>
                                 
                             </tr>
                         </thead>
@@ -384,5 +384,8 @@ export default {
 	width: 12px;
 	height: 16px;
     margin: 7px;
+}
+.input-page{
+    width: 40px;
 }
 </style>

@@ -25,19 +25,21 @@ namespace MISA.BL
         /// Lấy toàn bộ dữ liệu
         /// </summary>
         /// <returns>Toàn bộ dữ liệu</returns>
+        /// VHTHANG 20/2/1021
         public IEnumerable<TEntity> GetAll()
         {
             var entity = _dbContext.GetAll();
             return entity;
         }
 
-        
+
 
         /// <summary>
         /// Thêm một bản ghi
         /// </summary>
         /// <param name="entity">Object truyền vào</param>
         /// <returns>ServiceResult</returns>
+        /// VHTHANG 20/2/1021
         public ServiceResult Insert(TEntity entity)
         {
             var serviceResult = new ServiceResult();
@@ -67,6 +69,7 @@ namespace MISA.BL
         /// </summary>
         /// <param name="entity">Dữ liệu truyền vào</param>
         /// <returns>ServiceResult</returns>
+        /// VHTHANG 20/2/1021
         protected virtual ServiceResult Validate(TEntity entity,int type)
         {
             var serviceResult = new ServiceResult();
@@ -81,6 +84,7 @@ namespace MISA.BL
         /// </summary>
         /// <param name="entity">Object truyền vào</param>
         /// <returns>ServiceResult</returns>
+        /// VHTHANG 20/2/1021
         public ServiceResult Update(TEntity entity)
         {
             var serviceResult = new ServiceResult();
@@ -130,6 +134,7 @@ namespace MISA.BL
         /// </summary>
         /// <param name="entity">Object truyền vào</param>
         /// <returns>ServiceResult</returns>
+        /// VHTHANG 20/2/1021
         public ServiceResult Clone(TEntity entity)
         {
             var serviceResult = new ServiceResult();

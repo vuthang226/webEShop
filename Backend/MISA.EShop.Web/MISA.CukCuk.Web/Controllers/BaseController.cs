@@ -23,6 +23,7 @@ namespace MISA.CukCuk.Web.Controllers
         /// Lấy toàn bộ dữ liệu 
         /// </summary>
         /// <returns>Trạng thái và dữ liệu</returns>
+        /// VHTHANG 20/2/1021
         [HttpGet]
         public IActionResult Get()
         {
@@ -51,6 +52,12 @@ namespace MISA.CukCuk.Web.Controllers
             else return NoContent();
         }
 
+        /// <summary>
+        /// Nhân bản dữ liệu
+        /// </summary>
+        /// <param name="entity">Dữ liệu muốn nhân bản</param>
+        /// <param name="code"></param>
+        /// <returns></returns>
         [HttpPost("clone")]
         public IActionResult Post(TEntity entity,int code = 1)
         {
@@ -66,6 +73,11 @@ namespace MISA.CukCuk.Web.Controllers
             else return NoContent();
         }
 
+        /// <summary>
+        /// Update dữ liệu
+        /// </summary>
+        /// <param name="entity">dữ liệu đã chỉnh sửa</param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(TEntity entity)
         {
@@ -81,6 +93,11 @@ namespace MISA.CukCuk.Web.Controllers
             else return NoContent();
         }
 
+        /// <summary>
+        /// Xóa dữ liệu theo id
+        /// </summary>
+        /// <param name="entity">Dữ liệu cần xóa</param>
+        /// <returns>trả về thông báo</returns>
         [HttpDelete]
         public IActionResult Delete(TEntity entity)
         {
